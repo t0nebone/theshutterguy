@@ -15,14 +15,14 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Story -->
+  <!-- Meet Frank Video -->
   <section class="py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
-          <span class="text-primary-600 font-semibold">Our Story</span>
+          <span class="text-primary-600 font-semibold">Meet Frank</span>
           <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-6">
-            Experience You Can Trust
+            The Shutter Guy Himself
           </h2>
           <div class="prose prose-lg text-gray-600">
             <p>
@@ -42,7 +42,20 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
         <div class="relative">
-          <img src="/images/shutter-4.jpg" alt="Quality craftsmanship" class="rounded-2xl shadow-xl" />
+          <!-- Facebook Video Embed -->
+          <div class="aspect-video rounded-2xl shadow-xl overflow-hidden bg-gray-900">
+            <iframe 
+              src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ftheshutterguystpete%2Fvideos%2F401205764096666%2F&show_text=false&width=560" 
+              width="100%" 
+              height="100%" 
+              style="border:none;overflow:hidden" 
+              scrolling="no" 
+              frameborder="0" 
+              allowfullscreen="true" 
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              class="w-full h-full">
+            </iframe>
+          </div>
           <div class="absolute -bottom-6 -right-6 bg-primary-600 text-white p-6 rounded-xl shadow-lg">
             <p class="text-4xl font-bold">35+</p>
             <p class="text-primary-100">Years Experience</p>
@@ -108,15 +121,27 @@ import Layout from '../layouts/Layout.astro';
             <span class="text-4xl">🎖️</span>
             <h2 class="font-display text-3xl md:text-4xl font-bold text-black">HERO Discount</h2>
           </div>
-          <p class="text-lg text-amber-900 max-w-xl">
-            We're proud to offer special discounts to those who serve our community. 
-            Ask about our HERO discount for Military Service members and First Responders.
+          <p class="text-lg text-amber-900 max-w-xl mb-4">
+            We're proud to honor those who serve our community with <strong>10% off</strong> your entire order.
           </p>
+          <div class="flex flex-wrap gap-3 justify-center md:justify-start">
+            <span class="bg-amber-700 text-white text-sm font-semibold px-3 py-1 rounded-full">Active Military</span>
+            <span class="bg-amber-700 text-white text-sm font-semibold px-3 py-1 rounded-full">Veterans</span>
+            <span class="bg-amber-700 text-white text-sm font-semibold px-3 py-1 rounded-full">Police</span>
+            <span class="bg-amber-700 text-white text-sm font-semibold px-3 py-1 rounded-full">Fire & EMT</span>
+            <span class="bg-amber-700 text-white text-sm font-semibold px-3 py-1 rounded-full">Nurses</span>
+          </div>
         </div>
-        <a href="/contact" class="bg-black text-white font-bold px-8 py-4 rounded-lg text-lg hover:bg-gray-900 transition inline-flex items-center whitespace-nowrap">
-          Claim Your Discount
-          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-        </a>
+        <div class="text-center">
+          <div class="bg-black text-white rounded-xl p-6 mb-4">
+            <p class="text-5xl font-bold">10%</p>
+            <p class="text-amber-400 font-semibold">OFF</p>
+          </div>
+          <a href="/contact" class="bg-white text-black font-bold px-8 py-4 rounded-lg text-lg hover:bg-gray-100 transition inline-flex items-center whitespace-nowrap">
+            Claim Your Discount
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
       </div>
     </div>
   </section>
