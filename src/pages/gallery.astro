@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const projects = [
+  { src: '/images/shutter-1.jpg', alt: 'Plantation shutters in living room', category: 'Shutters' },
+  { src: '/images/shutter-2.jpg', alt: 'Custom blinds installation', category: 'Blinds' },
+  { src: '/images/shutter-3.jpg', alt: 'Window shades in bedroom', category: 'Shades' },
+  { src: '/images/shutter-4.jpg', alt: 'Plantation shutters detail', category: 'Shutters' },
+  { src: '/images/bedroom.jpg', alt: 'Bedroom plantation shutters', category: 'Shutters' },
+  { src: '/images/sliding-doors.jpg', alt: 'Shutters for sliding doors', category: 'Shutters' },
+  { src: '/images/installation.jpg', alt: 'Professional installation', category: 'Installation' },
+];
+---
+
+<Layout title="Gallery" description="See our portfolio of custom plantation shutters, blinds, and shades installed in St. Petersburg area homes.">
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h1 class="font-display text-4xl md:text-5xl font-bold mb-6">Our Work</h1>
+        <p class="text-xl text-gray-300">
+          Browse our portfolio of custom window treatment installations in homes throughout 
+          St. Petersburg and the Tampa Bay area.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Grid -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {projects.map((project) => (
+          <div class="group relative overflow-hidden rounded-xl shadow-lg aspect-[4/3]">
+            <img 
+              src={project.src} 
+              alt={project.alt}
+              class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition">
+              <div class="absolute bottom-4 left-4">
+                <span class="bg-primary-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
+                  {project.category}
+                </span>
+                <p class="text-white mt-2 font-medium">{project.alt}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- More Coming -->
+      <div class="mt-16 text-center bg-gray-50 rounded-2xl p-12">
+        <h3 class="font-display text-2xl font-bold text-gray-900 mb-4">Want to See Your Home Here?</h3>
+        <p class="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+          We're always adding new projects to our gallery. Schedule your free consultation 
+          and let us help you transform your windows.
+        </p>
+        <a href="/contact" class="bg-primary-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-primary-700 transition inline-flex items-center">
+          Get Started
+          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section class="py-20 bg-gray-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <svg class="w-12 h-12 text-primary-400 mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+      </svg>
+      <blockquote class="text-2xl md:text-3xl font-medium mb-8 leading-relaxed">
+        "Frank installed my plantation shutters in my home on all my windows. The installation was flawless, 
+        and the shutters were beautiful. The shutters not only increased the appraisal value on my home — 
+        it was one of the most popular selling points. Needless to say, when I moved, the first call was to Frank!"
+      </blockquote>
+      <div>
+        <p class="font-semibold text-lg">Patrice Denike</p>
+        <p class="text-gray-400">Real Estate Broker, St. Cloud, FL</p>
+      </div>
+    </div>
+  </section>
+</Layout>
